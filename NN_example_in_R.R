@@ -37,6 +37,9 @@ paste0("Training entries: ", length(train_data), ", labels: ",
 
 train_data[1, ]
 
+train_labels[1:10] # Display first 10 entries
+
+
 #Format the data
 column_names <- c('CRIM', 'ZN', 'INDUS', 'CHAS', 'NOX', 'RM', 'AGE', 
                   'DIS', 'RAD', 'TAX', 'PTRATIO', 'B', 'LSTAT')
@@ -52,7 +55,6 @@ test_df <- test_data %>%
     mutate(label = test_labels)
 
 
-train_labels[1:10] # Display first 10 entries
 
 ## PREPROCESSING ###############################################################
 
