@@ -8,6 +8,18 @@ library(tfdatasets)
 library(dplyr)
 library(ggplot2)
 
+###################################
+###To run the first time you run this code
+###(hooking tensorflow to a virtual environment)
+install.packages('progress')
+install.packages("remotes")
+remotes::install_github("rstudio/tensorflow")
+library(tensorflow)
+reticulate::install_miniconda()
+install_tensorflow(version = "2.5.0",method = "conda", envname = "r-reticulate")
+##################################
+
+
 ## LOAD AND FORMAT THE DATA ####################################################
 #Load dataset from the tfdatasets packages
 boston_housing <- dataset_boston_housing()
